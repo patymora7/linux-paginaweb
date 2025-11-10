@@ -20,7 +20,8 @@
     { letter: "A", title: "Traslado",          desc: "Prioriza el transporte.",            icon: "local_hospital",   spline: S },
     { letter: "C", title: "Resumen",           desc: "Repaso A-B-C completo.",             icon: "check_circle",     spline: S },
   ];
- // 2) Hooks del DOM
+
+  // 2) Hooks del DOM
   const viewer = document.querySelector(".spline-box spline-viewer");
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
@@ -52,7 +53,8 @@
   };
 
   injectStyles();
- // 4) Loader
+
+  // 4) Loader
   const loader = document.createElement("div");
   loader.className = "spline-loader";
   loader.textContent = "Cargando escena…";
@@ -91,7 +93,7 @@
     setSpline(pages[idx].spline);
   };
 
-// 6) Navegación
+  // 6) Navegación
   prevBtn.addEventListener("click", () => { if (idx > 0) { idx--; render(); } });
   nextBtn.addEventListener("click", () => { if (idx < pages.length - 1) { idx++; render(); } });
 
@@ -119,4 +121,4 @@
 
     </script>
 
-
+    
