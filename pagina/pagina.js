@@ -241,8 +241,7 @@ Draggable.create(PROXY, {
   onRelease: function (e) {
     const DISTX = Math.abs(e.x - startX);
     const DISTY = Math.abs(e.y - startY);
-    const TRAVELLED = Mat
-    h.sqrt(DISTX * DISTX + DISTY * DISTY);
+    const TRAVELLED = Math.sqrt(DISTX * DISTX + DISTY * DISTY);
     to(DUMMY_CORD, {
       attr: { x2: endX, y2: endY },
       duration: CORD_DURATION,
